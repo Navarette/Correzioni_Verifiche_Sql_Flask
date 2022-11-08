@@ -16,17 +16,10 @@
         </tr>
         {% for record in dati %}
             <tr class="table-dark">
-                {% for index in range(nomiColonne|length)%}
-                    {%if index == 0 %}
-                        <td>
-                            <a href="/totaleOrdini/{{record[index]}}">{{record[index]}}</a>
-                        </td>
-                    {%else%}
+                {% for index in range(nomiColonne|length) %}
                     <td>
                         {{record[index]}}
                     </td>
-                    {%endif%}
-
                 {% endfor %}
             </tr>
         {% endfor %}
